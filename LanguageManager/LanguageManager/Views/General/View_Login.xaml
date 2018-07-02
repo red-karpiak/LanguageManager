@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LanguageManager.Views.General.View_Login">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Language Manager" FontSize="Large" HorizontalOptions="CenterAndExpand"/>
+            <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label x:Name="lblUsername" Grid.Row="0" Grid.Column="0" Text="Username: " VerticalTextAlignment="Center"/>
+                <Entry x:Name="entUsername" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Username}"/>
+                <Label x:Name="lblPassword" Grid.Row="1" Grid.Column="0" Text="Password: " VerticalTextAlignment="Center"/>
+                <Entry x:Name="entPassword" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Password}" IsPassword="true"/>
+                <Button x:Name="btnLogin" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Text="Login" Command="{Binding Login}"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

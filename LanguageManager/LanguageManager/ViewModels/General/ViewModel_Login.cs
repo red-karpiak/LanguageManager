@@ -36,6 +36,7 @@ namespace LanguageManager.ViewModels.General
             }
             else
             {
+                MessagingCenter.Send(this, "LoginError");
                 //send errors to the user
                 //invalid?
                 //no user exists?

@@ -3,7 +3,8 @@
                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                   xmlns:local="clr-namespace:LanguageManager.Views.General"
                   xmlns:detail="clr-namespace:LanguageManager.Views.Detail"
-                  x:Class="LanguageManager.Views.General.View_MasterDetail">
+                  x:Class="LanguageManager.Views.General.View_MasterDetail"
+                  Title="Language Manager">
     <MasterDetailPage.Master>
         <local:View_MasterPage x:Name="masterPage"/>
     </MasterDetailPage.Master>

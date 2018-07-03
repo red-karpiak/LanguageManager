@@ -18,7 +18,7 @@ namespace LanguageManager.Common
         }
         public bool Login()
         {
-            throw new NotImplementedException();
+            return (string.IsNullOrEmpty(Username) || string.IsNullOrEmpty(Password)) ? false : true;
         }
 
         public bool Register(string username, string password, string email)

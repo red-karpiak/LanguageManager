@@ -4,10 +4,26 @@
              x:Class="LanguageManager.Views.General.View_MasterPage"
              Title="Menu">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Language Manager!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout x:Name="MasterStack" VerticalOptions="FillAndExpand">
+            <StackLayout x:Name="TopStack" HorizontalOptions="Center">
+                <Label x:Name="lblBanner"/>
+            </StackLayout>
+            <StackLayout x:Name="MidStack" VerticalOptions="CenterAndExpand">
+                <ListView x:Name="lvContent" ItemsSource="{Binding Items}" SeparatorVisibility="Default" SelectedItem="{Binding SelectedItem}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Label Grid.Column="1" Text="{Binding Title}" FontSize="Medium" VerticalTextAlignment="Center"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <StackLayout x:Name="BottomStack" VerticalOptions="EndAndExpand">
+                <Button x:Name="btnLogout" Text="Logout" Command="{Binding LogoutCommand}"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace LanguageManager.Views.Detail
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Settings : ContentPage
+	public partial class View_Settings : ContentPage
 	{
-		public Settings ()
+		public View_Settings ()
 		{
 			InitializeComponent ();
 		}

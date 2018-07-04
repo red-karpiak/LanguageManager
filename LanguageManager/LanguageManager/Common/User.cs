@@ -1,17 +1,17 @@
 ﻿using LanguageManager.Common.Interfaces;
+using LanguageManager.DataManagement;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace LanguageManager.Common
 {
-    public class User : IUser
+    public class User : DataEntry, IUser
     {
         public string Username { get; set; }
         public string Password { get; set; }
-
-
-        public User(string name, string pass)
+        
+        public User(int id, string name, string pass) : base(id)
         {
             Username = name;
             Password = pass;
